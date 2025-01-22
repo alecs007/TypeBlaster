@@ -1,0 +1,22 @@
+.header {
+  background-color: var(--primary-color);
+  width: 100vw;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 4px solid rgba(143, 41, 41, 0.7);
+  h1 {
+    margin-left: 20px;
+    font-weight: 600;
+    font-family: font1;
+    opacity: 0.8;
+  }
+  img {
+    height: 50%;
+    aspect-ratio: 1/1;
+    margin-right: 20px;
+    filter: invert(1);
+    opacity: 0.6;
+  }
+}

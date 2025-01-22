@@ -1,0 +1,19 @@
+:root {
+  --black: #1f1f1f;
+  --white: #f1f1f1;
+  --primary-color: #7e3333;
+}
+#root {
+  background-color: var(--black);
+  color: var(--white);
+  width: 100vw;
+  height: 100vh;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "font1";
+  src: url("./fonts/BrunoAce-Regular.ttf");
+}
