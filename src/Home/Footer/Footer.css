@@ -1,0 +1,13 @@
+.footer {
+  width: 100vw;
+  height: 3vh;
+  min-height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.4;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin-bottom: 3px;
+  font-size: clamp(10px, 1vw, 15px);
+}

@@ -1,21 +1,26 @@
 .header {
-  background-color: var(--primary-color);
+  background-color: rgba(255, 255, 255, 0.1);
   width: 100vw;
-  height: 80px;
+  height: 7vh;
+  min-height: 65px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 4px solid rgba(143, 41, 41, 0.7);
+  border-bottom: 3px solid rgba(143, 41, 41, 0.7);
   h1 {
     margin-left: 15px;
     font-weight: 600;
     font-family: font1;
   }
   img {
-    height: 50%;
+    height: 45%;
     aspect-ratio: 1/1;
     margin-right: 15px;
     filter: invert(1);
     opacity: 0.6;
+    transition: rotate 1s;
+  }
+  img:hover {
+    rotate: 180deg;
   }
 }
