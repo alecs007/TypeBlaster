@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./Main.css";
+import ThemeToggle from "../../components/ThemeToggle";
 import reload from "../../assets/reload.png";
 import left_arrow from "../../assets/left-arrow.png";
 import down_arrow from "../../assets/down-arrow.png";
@@ -110,6 +111,9 @@ const Main = ({ isOpen }) => {
   useEffect(() => {
     fetchWords();
   }, [language]);
+
+  const { toggleTheme, theme } = ThemeToggle();
+
   return (
     <div className="main">
       <div className={`settings ${isOpen ? "open" : ""}`}>
@@ -124,12 +128,20 @@ const Main = ({ isOpen }) => {
         {openCategory === "theme" && (
           <div className="submenu">
             <label>
-              Dark
-              <input type="radio" name="theme" value="dark" />
+              Light
+              <input
+                type="radio"
+                checked={theme === "light"}
+                onChange={toggleTheme}
+              />
             </label>
             <label>
-              Light
-              <input type="radio" name="theme" value="light" />
+              Dark
+              <input
+                type="radio"
+                checked={theme === "dark"}
+                onChange={toggleTheme}
+              />
             </label>
           </div>
         )}
@@ -147,20 +159,18 @@ const Main = ({ isOpen }) => {
               English
               <input
                 type="radio"
-                name="theme"
-                value="dark"
                 checked={language === "English"}
                 onChange={() => setLanguage("English")}
+                disabled={timerStarted}
               />
             </label>
             <label>
               Romanian
               <input
                 type="radio"
-                name="theme"
-                value="light"
                 checked={language === "Romanian"}
                 onChange={() => setLanguage("Romanian")}
+                disabled={timerStarted}
               />
             </label>
           </div>
@@ -179,30 +189,27 @@ const Main = ({ isOpen }) => {
               0:30
               <input
                 type="radio"
-                name="theme"
-                value="dark"
                 checked={timer === 30}
                 onChange={() => setTimer(30)}
+                disabled={timerStarted}
               />
             </label>
             <label>
               1:00
               <input
                 type="radio"
-                name="theme"
-                value="light"
                 checked={timer === 60}
                 onChange={() => setTimer(60)}
+                disabled={timerStarted}
               />
             </label>
             <label>
               2:00
               <input
                 type="radio"
-                name="theme"
-                value="light"
                 checked={timer === 120}
                 onChange={() => setTimer(120)}
+                disabled={timerStarted}
               />
             </label>
           </div>

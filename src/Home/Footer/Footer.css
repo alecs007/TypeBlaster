@@ -9,5 +9,5 @@
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   margin-bottom: 3px;
-  font-size: clamp(10px, 1vw, 15px);
+  font-size: 13px;
 }
