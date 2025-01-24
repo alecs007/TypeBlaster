@@ -13,6 +13,7 @@
   align-items: center;
   justify-content: space-between;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 * {
   margin: 0;
@@ -21,4 +22,7 @@
 @font-face {
   font-family: "font1";
   src: url("./fonts/BrunoAce-Regular.ttf");
+}
+::-webkit-scrollbar {
+  display: none;
 }

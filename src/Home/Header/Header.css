@@ -11,14 +11,17 @@
     font-weight: 600;
     font-family: font1;
   }
+}
+.imgcontainer {
+  height: 45%;
+  aspect-ratio: 1/1;
+  margin-right: 15px;
+  filter: invert(1);
+  opacity: 0.6;
+  cursor: pointer;
   img {
-    height: 45%;
-    aspect-ratio: 1/1;
-    margin-right: 15px;
-    filter: invert(1);
-    opacity: 0.6;
-    transition: rotate 1s;
-    cursor: pointer;
+    height: 100%;
+    transition: rotate 0.7s ease-in-out;
   }
   img:hover {
     rotate: 180deg;
