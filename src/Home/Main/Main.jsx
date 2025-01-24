@@ -313,6 +313,10 @@ const Main = ({ setIsOpen, isOpen, toggleButtonRef }) => {
             setInputDisabled(false);
             setTimerStarted(false);
             fetchWords();
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
           }}
         >
           Play Again
