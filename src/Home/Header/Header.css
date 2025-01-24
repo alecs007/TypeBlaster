@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 3px solid rgba(143, 41, 41, 0.7);
+  border-bottom: 3px solid var(--primary-color);
   h1 {
     margin-left: 15px;
     font-weight: 600;
@@ -18,6 +18,7 @@
     filter: invert(1);
     opacity: 0.6;
     transition: rotate 1s;
+    cursor: pointer;
   }
   img:hover {
     rotate: 180deg;

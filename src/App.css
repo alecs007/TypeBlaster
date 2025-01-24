@@ -1,7 +1,7 @@
 :root {
   --black: #1f1f1f;
   --white: #f1f1f1;
-  --primary-color: #7e3333;
+  --primary-color: #7e33336b;
 }
 #root {
   background-color: var(--black);
@@ -12,6 +12,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  overflow-y: auto;
 }
 * {
   margin: 0;
