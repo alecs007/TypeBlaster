@@ -8,8 +8,9 @@
   border-bottom: 3px solid var(--primary-color);
   h1 {
     margin-left: 15px;
-    font-weight: 600;
-    font-family: font1;
+    font-family: "Audiowide";
+    font-weight: 300;
+    font-style: normal;
   }
 }
 .imgcontainer {

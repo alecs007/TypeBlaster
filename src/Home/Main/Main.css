@@ -17,7 +17,7 @@
   justify-content: center;
   font-size: clamp(90px, 8vw, 180px);
   font-weight: 900;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: sans-serif;
 }
 input {
   width: 45%;
@@ -60,7 +60,7 @@ input::placeholder {
   font-size: 1.2em;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.8);
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: sans-serif;
   cursor: default;
 }
 .word.first {
@@ -112,7 +112,7 @@ input::placeholder {
 }
 .statsitem {
   font-size: clamp(18px, 1.5vw, 25px);
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: sans-serif;
 }
 .playagain {
   width: 15%;
@@ -125,9 +125,9 @@ input::placeholder {
   justify-content: center;
   border-radius: 10px;
   border: 2px solid rgba(0, 0, 0, 0.3);
-  font-size: clamp(10px, 1vw, 19px);
+  font-size: 0.9em;
   font-weight: 900;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: sans-serif;
   color: rgb(255, 255, 255);
   background-color: rgba(116, 116, 116, 0.7);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
@@ -175,7 +175,7 @@ input::placeholder {
   justify-content: space-between;
   font-size: 1.2em;
   font-weight: 900;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: sans-serif;
   color: rgb(255, 255, 255);
   border: 2px solid rgba(0, 0, 0, 0.3);
   padding-left: 20px;
@@ -196,7 +196,7 @@ input::placeholder {
   justify-content: space-between;
   font-size: 1.2em;
   font-weight: 900;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: sans-serif;
   color: rgb(255, 255, 255);
   border: 2px solid rgba(0, 0, 0, 0.3);
   padding-left: 20px;
@@ -217,6 +217,7 @@ label {
 @media screen and (max-width: 620px) {
   .main {
     height: fit-content;
+    margin-top: 25px;
   }
   input {
     width: 80vw;
