@@ -162,6 +162,7 @@ input::placeholder {
   margin: 10px;
   height: fit-content;
   transition: right 0.3s ease-in-out;
+  z-index: 1000;
 }
 .settings.open {
   right: 0px;

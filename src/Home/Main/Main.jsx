@@ -55,8 +55,9 @@ const Main = ({ setIsOpen, isOpen, toggleButtonRef }) => {
         clearInterval(timerChanger);
       };
     } else if (timer === 0) {
-      setInputDisabled(true);
       setInput("");
+      setInputDisabled(false);
+      setTimerStarted(false);
     }
   }, [timer, timerStarted]);
 
@@ -180,7 +181,13 @@ const Main = ({ setIsOpen, isOpen, toggleButtonRef }) => {
               <input
                 type="radio"
                 checked={language === "English"}
-                onChange={() => setLanguage("English")}
+                onChange={() => {
+                  setLanguage("English");
+                  setCorrectWords(0);
+                  setIncorrectWords(0);
+                  setInput("");
+                  setTimerStarted(false);
+                }}
                 disabled={timerStarted}
               />
             </label>
@@ -189,7 +196,13 @@ const Main = ({ setIsOpen, isOpen, toggleButtonRef }) => {
               <input
                 type="radio"
                 checked={language === "Romanian"}
-                onChange={() => setLanguage("Romanian")}
+                onChange={() => {
+                  setLanguage("Romanian");
+                  setCorrectWords(0);
+                  setIncorrectWords(0);
+                  setInput("");
+                  setTimerStarted(false);
+                }}
                 disabled={timerStarted}
               />
             </label>
@@ -210,7 +223,14 @@ const Main = ({ setIsOpen, isOpen, toggleButtonRef }) => {
               <input
                 type="radio"
                 checked={timer === 30}
-                onChange={() => setTimer(30)}
+                onChange={() => {
+                  setTimer(30);
+                  setCorrectWords(0);
+                  setIncorrectWords(0);
+                  setInput("");
+                  setTimerStarted(false);
+                  fetchWords();
+                }}
                 disabled={timerStarted}
               />
             </label>
@@ -219,7 +239,14 @@ const Main = ({ setIsOpen, isOpen, toggleButtonRef }) => {
               <input
                 type="radio"
                 checked={timer === 60}
-                onChange={() => setTimer(60)}
+                onChange={() => {
+                  setTimer(60);
+                  setCorrectWords(0);
+                  setIncorrectWords(0);
+                  setInput("");
+                  setTimerStarted(false);
+                  fetchWords();
+                }}
                 disabled={timerStarted}
               />
             </label>
@@ -228,7 +255,14 @@ const Main = ({ setIsOpen, isOpen, toggleButtonRef }) => {
               <input
                 type="radio"
                 checked={timer === 120}
-                onChange={() => setTimer(120)}
+                onChange={() => {
+                  setTimer(120);
+                  setCorrectWords(0);
+                  setIncorrectWords(0);
+                  setInput("");
+                  setTimerStarted(false);
+                  fetchWords();
+                }}
                 disabled={timerStarted}
               />
             </label>
