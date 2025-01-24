@@ -17,6 +17,7 @@ const Main = ({ isOpen }) => {
     totalWords > 0 ? ((correctWords / totalWords) * 100).toFixed(1) : 0;
   const [isCorrect, setIsCorrect] = useState(null);
   const [isIncorrect, setIsIncorrect] = useState(false);
+  const [language, setLanguage] = useState("English");
 
   const shuffleArray = (array) => {
     return array
@@ -26,7 +27,7 @@ const Main = ({ isOpen }) => {
   };
 
   const fetchWords = () => {
-    fetch("./words_en.txt")
+    fetch(language === "English" ? "./words_en.txt" : "./words_ro.txt")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch data");
@@ -106,6 +107,9 @@ const Main = ({ isOpen }) => {
     setOpenCategory(openCategory === category ? null : category);
   };
 
+  useEffect(() => {
+    fetchWords();
+  }, [language]);
   return (
     <div className="main">
       <div className={`settings ${isOpen ? "open" : ""}`}>
@@ -119,8 +123,14 @@ const Main = ({ isOpen }) => {
         </div>
         {openCategory === "theme" && (
           <div className="submenu">
-            <div className="submenu-item">Dark</div>
-            <div className="submenu-item">Light</div>
+            <label>
+              Dark
+              <input type="radio" name="theme" value="dark" />
+            </label>
+            <label>
+              Light
+              <input type="radio" name="theme" value="light" />
+            </label>
           </div>
         )}
         <div className="menu-item" onClick={() => toggleCategory("language")}>
@@ -133,8 +143,26 @@ const Main = ({ isOpen }) => {
         </div>
         {openCategory === "language" && (
           <div className="submenu">
-            <div className="submenu-item">English</div>
-            <div className="submenu-item">Romanian</div>
+            <label>
+              English
+              <input
+                type="radio"
+                name="theme"
+                value="dark"
+                checked={language === "English"}
+                onChange={() => setLanguage("English")}
+              />
+            </label>
+            <label>
+              Romanian
+              <input
+                type="radio"
+                name="theme"
+                value="light"
+                checked={language === "Romanian"}
+                onChange={() => setLanguage("Romanian")}
+              />
+            </label>
           </div>
         )}
         <div className="menu-item" onClick={() => toggleCategory("time")}>
@@ -147,9 +175,36 @@ const Main = ({ isOpen }) => {
         </div>
         {openCategory === "time" && (
           <div className="submenu">
-            <div className="submenu-item">0:30</div>
-            <div className="submenu-item">1:00</div>
-            <div className="submenu-item">2:00</div>
+            <label>
+              0:30
+              <input
+                type="radio"
+                name="theme"
+                value="dark"
+                checked={timer === 30}
+                onChange={() => setTimer(30)}
+              />
+            </label>
+            <label>
+              1:00
+              <input
+                type="radio"
+                name="theme"
+                value="light"
+                checked={timer === 60}
+                onChange={() => setTimer(60)}
+              />
+            </label>
+            <label>
+              2:00
+              <input
+                type="radio"
+                name="theme"
+                value="light"
+                checked={timer === 120}
+                onChange={() => setTimer(120)}
+              />
+            </label>
           </div>
         )}
       </div>
