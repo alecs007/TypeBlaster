@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <Header isOpen={isOpen} setIsOpen={setIsOpen} />
-      <Main isOpen={isOpen} />
+      <Main isOpen={isOpen} setIsOpen={setIsOpen} />
       <Footer />
     </>
   );

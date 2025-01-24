@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./Main.css";
 import ThemeToggle from "../../components/ThemeToggle";
 import reload from "../../assets/reload.png";
 import left_arrow from "../../assets/left-arrow.png";
 import down_arrow from "../../assets/down-arrow.png";
 
-const Main = ({ isOpen }) => {
+const Main = ({ setIsOpen, isOpen }) => {
   const [words, setWords] = useState([]);
   const [input, setInput] = useState("");
   const [inputDisabled, setInputDisabled] = useState(false);
@@ -114,9 +114,25 @@ const Main = ({ isOpen }) => {
 
   const { toggleTheme, theme } = ThemeToggle();
 
+  const settingsRef = useRef();
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (settingsRef.current && !settingsRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <div className="main">
-      <div className={`settings ${isOpen ? "open" : ""}`}>
+      <div className={`settings ${isOpen ? "open" : ""}`} ref={settingsRef}>
         <div className="menu-item" onClick={() => toggleCategory("theme")}>
           <p>Theme</p>
           {openCategory === "theme" ? (
