@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import "./Main.css";
 import reload from "../../assets/reload.png";
+import left_arrow from "../../assets/left-arrow.png";
+import down_arrow from "../../assets/down-arrow.png";
 
 const Main = ({ isOpen }) => {
   const [words, setWords] = useState([]);
@@ -15,6 +17,7 @@ const Main = ({ isOpen }) => {
     totalWords > 0 ? ((correctWords / totalWords) * 100).toFixed(1) : 0;
   const [isCorrect, setIsCorrect] = useState(null);
   const [isIncorrect, setIsIncorrect] = useState(false);
+
   const shuffleArray = (array) => {
     return array
       .map((item) => ({ item, sort: Math.random() }))
@@ -97,9 +100,59 @@ const Main = ({ isOpen }) => {
     }
   }, [input]);
 
+  const [openCategory, setOpenCategory] = useState(null);
+
+  const toggleCategory = (category) => {
+    setOpenCategory(openCategory === category ? null : category);
+  };
+
   return (
     <div className="main">
-      <div className={`settings ${isOpen ? "open" : ""}`}>123</div>
+      <div className={`settings ${isOpen ? "open" : ""}`}>
+        <div className="menu-item" onClick={() => toggleCategory("theme")}>
+          <p>Theme</p>
+          {openCategory === "theme" ? (
+            <img src={left_arrow} alt="left arrow"></img>
+          ) : (
+            <img src={down_arrow} alt="down arrow"></img>
+          )}
+        </div>
+        {openCategory === "theme" && (
+          <div className="submenu">
+            <div className="submenu-item">Dark</div>
+            <div className="submenu-item">Light</div>
+          </div>
+        )}
+        <div className="menu-item" onClick={() => toggleCategory("language")}>
+          <p>Language</p>
+          {openCategory === "language" ? (
+            <img src={left_arrow} alt="left arrow"></img>
+          ) : (
+            <img src={down_arrow} alt="down arrow"></img>
+          )}
+        </div>
+        {openCategory === "language" && (
+          <div className="submenu">
+            <div className="submenu-item">English</div>
+            <div className="submenu-item">Romanian</div>
+          </div>
+        )}
+        <div className="menu-item" onClick={() => toggleCategory("time")}>
+          <p>Time</p>
+          {openCategory === "time" ? (
+            <img src={left_arrow} alt="left arrow"></img>
+          ) : (
+            <img src={down_arrow} alt="down arrow"></img>
+          )}
+        </div>
+        {openCategory === "time" && (
+          <div className="submenu">
+            <div className="submenu-item">0:30</div>
+            <div className="submenu-item">1:00</div>
+            <div className="submenu-item">2:00</div>
+          </div>
+        )}
+      </div>
       <div className="timer">{formatTime(timer)}</div>
       <input
         type="text"
