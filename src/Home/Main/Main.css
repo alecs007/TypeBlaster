@@ -156,7 +156,7 @@ input::placeholder {
   width: 100%;
 }
 .settings {
-  position: absolute;
+  position: fixed;
   right: -1000px;
   top: 75px;
   margin: 10px;
