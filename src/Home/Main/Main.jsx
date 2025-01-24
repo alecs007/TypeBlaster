@@ -5,7 +5,7 @@ import reload from "../../assets/reload.png";
 import left_arrow from "../../assets/left-arrow.png";
 import down_arrow from "../../assets/down-arrow.png";
 
-const Main = ({ setIsOpen, isOpen }) => {
+const Main = ({ setIsOpen, isOpen, toggleButtonRef }) => {
   const [words, setWords] = useState([]);
   const [input, setInput] = useState("");
   const [inputDisabled, setInputDisabled] = useState(false);
@@ -118,7 +118,11 @@ const Main = ({ setIsOpen, isOpen }) => {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (settingsRef.current && !settingsRef.current.contains(event.target)) {
+      if (
+        settingsRef.current &&
+        !settingsRef.current.contains(event.target) &&
+        !toggleButtonRef.current.contains(event.target)
+      ) {
         setIsOpen(false);
       }
     };
