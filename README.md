@@ -12,3 +12,5 @@
     •Minimalist Design: Focused on creating a clean, user-friendly interface to highlight functionality without distractions.
     
 TypeBlaster was an excellent opportunity to refine my coding skills and explore the fundamentals of interactive game development.
+
+![typeblaster_presentation](https://github.com/user-attachments/assets/38ae58bb-0f16-4f15-86bd-73089b0f0c10)
