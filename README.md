@@ -1,4 +1,4 @@
-# <h1 align="center"><strong><em>TypeBlaster</em></strong></h1>
+# <h1 align="center"><strong><em>TypeBlaster🔫</em></strong></h1>
 
 **TypeBlaster** is a fast-paced typing game that helps players improve their typing speed and accuracy. The game challenges players to type randomly generated words as quickly and correctly as possible. The simplicity of the gameplay makes it engaging and educational, appealing to anyone looking to sharpen their typing skills.
 
