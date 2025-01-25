@@ -76,6 +76,10 @@ const Main = ({ setIsOpen, isOpen, toggleButtonRef }) => {
 
   const handleKeyPress = (e) => {
     if (e.key === " " || e.key === "Enter") {
+      if (input.trim().length < 1) {
+        e.preventDefault();
+        return;
+      }
       const currentWord = input.trim().split(" ").pop();
       setWords((prevWords) => prevWords.slice(1));
       setInput("");
