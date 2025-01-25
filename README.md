@@ -1,8 +1,13 @@
-# React + Vite
+# <h1 align="center"><strong><em>TypeBlaster</em></strong></h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**TypeBlaster** is a fast-paced typing game that helps players improve their typing speed and accuracy. The game challenges players to type randomly generated words as quickly and correctly as possible. The simplicity of the gameplay makes it engaging and educational, appealing to anyone looking to sharpen their typing skills.
 
-Currently, two official plugins are available:
+**What I learned while making TypeBlaster:**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    •Word Generation: Implemented efficient random word generation to keep the gameplay dynamic and unpredictable.
+    •Real-Time Input Handling: Mastered capturing and validating user input instantly to create a seamless experience.
+    •UI Feedback: Designed responsive visual cues for correct and incorrect inputs, enhancing player engagement.
+    •Performance Optimization: Streamlined updates to ensure the game runs smoothly on various devices.
+    •Minimalist Design: Focused on creating a clean, user-friendly interface to highlight functionality without distractions.
+    
+TypeBlaster was an excellent opportunity to refine my coding skills and explore the fundamentals of interactive game development.
