@@ -56,7 +56,7 @@ const Main = ({ setIsOpen, isOpen, toggleButtonRef }) => {
       };
     } else if (timer === 0) {
       setInput("");
-      setInputDisabled(false);
+      setInputDisabled(true);
       setTimerStarted(false);
     }
   }, [timer, timerStarted]);
@@ -294,7 +294,7 @@ const Main = ({ setIsOpen, isOpen, toggleButtonRef }) => {
         <button
           className="reload"
           onClick={() => fetchWords()}
-          disabled={timerStarted}
+          disabled={timerStarted || inputDisabled}
         >
           <img src={reload} alt="Reload" />
         </button>
