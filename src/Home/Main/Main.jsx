@@ -1,11 +1,18 @@
 import { useState, useEffect, useRef } from "react";
 import "./Main.css";
+import PropTypes from "prop-types";
 import ThemeToggle from "../../components/ThemeToggle";
 import reload from "../../assets/reload.png";
 import left_arrow from "../../assets/left-arrow.png";
 import down_arrow from "../../assets/down-arrow.png";
 
-const Main = ({ setIsOpen, isOpen, toggleButtonRef }) => {
+const Main = ({
+  setIsOpen,
+  isOpen,
+  toggleButtonRef,
+  setOpenCategory,
+  openCategory,
+}) => {
   const [words, setWords] = useState([]);
   const [input, setInput] = useState("");
   const [inputDisabled, setInputDisabled] = useState(false);
@@ -106,9 +113,6 @@ const Main = ({ setIsOpen, isOpen, toggleButtonRef }) => {
       setIsIncorrect(false);
     }
   }, [input]);
-
-  const [openCategory, setOpenCategory] = useState(null);
-
   const toggleCategory = (category) => {
     setOpenCategory(openCategory === category ? null : category);
   };
@@ -129,6 +133,7 @@ const Main = ({ setIsOpen, isOpen, toggleButtonRef }) => {
         !toggleButtonRef.current.contains(event.target)
       ) {
         setIsOpen(false);
+        setOpenCategory(null);
       }
     };
 
@@ -328,6 +333,14 @@ const Main = ({ setIsOpen, isOpen, toggleButtonRef }) => {
       </div>
     </div>
   );
+};
+
+Main.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  setIsOpen: PropTypes.func.isRequired,
+  toggleButtonRef: PropTypes.object.isRequired,
+  openCategory: PropTypes.string,
+  setOpenCategory: PropTypes.func.isRequired,
 };
 
 export default Main;

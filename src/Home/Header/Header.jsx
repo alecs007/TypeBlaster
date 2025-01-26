@@ -1,10 +1,11 @@
 import "./Header.css";
+import PropTypes from "prop-types";
 import ThemeToggle from "../../components/ThemeToggle";
 import settings from "../../assets/settings.png";
 import close from "../../assets/close.png";
 
-const Header = ({ isOpen, setIsOpen, toggleButtonRef }) => {
-  const { theme, setTheme } = ThemeToggle();
+const Header = ({ isOpen, setIsOpen, toggleButtonRef, setOpenCategory }) => {
+  const { theme } = ThemeToggle();
   return (
     <div className="header">
       <h1>TypeBlaster</h1>
@@ -13,7 +14,10 @@ const Header = ({ isOpen, setIsOpen, toggleButtonRef }) => {
           <img
             src={close}
             alt="close"
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => {
+              setIsOpen(!isOpen);
+              setOpenCategory(null);
+            }}
             style={{ filter: theme === "light" ? "invert(0)" : "invert(1)" }}
           ></img>
         ) : (
@@ -27,6 +31,13 @@ const Header = ({ isOpen, setIsOpen, toggleButtonRef }) => {
       </div>
     </div>
   );
+};
+
+Header.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  setIsOpen: PropTypes.func.isRequired,
+  toggleButtonRef: PropTypes.object.isRequired,
+  setOpenCategory: PropTypes.func.isRequired,
 };
 
 export default Header;
