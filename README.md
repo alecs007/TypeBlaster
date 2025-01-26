@@ -13,4 +13,6 @@
     
 TypeBlaster was an excellent opportunity to refine my coding skills and explore the fundamentals of interactive game development.
 
-![typeblaster_presentation](https://github.com/user-attachments/assets/38ae58bb-0f16-4f15-86bd-73089b0f0c10)
+![presentation_typeblaster](https://github.com/user-attachments/assets/3e0a3a5c-4370-4388-8043-d14333518c5d)
+
+
