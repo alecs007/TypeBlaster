@@ -65,6 +65,10 @@ const Main = ({
       setInput("");
       setInputDisabled(true);
       setTimerStarted(false);
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth",
+      });
     }
   }, [timer, timerStarted]);
 
