@@ -18,14 +18,14 @@ const Header = ({ isOpen, setIsOpen, toggleButtonRef, setOpenCategory }) => {
               setIsOpen(!isOpen);
               setOpenCategory(null);
             }}
-            style={{ filter: theme === "light" ? "invert(0)" : "invert(1)" }}
+            className={theme === "dark" ? "invert" : ""}
           ></img>
         ) : (
           <img
             src={settings}
             alt="settings"
             onClick={() => setIsOpen(!isOpen)}
-            style={{ filter: theme === "light" ? "invert(0)" : "invert(1)" }}
+            className={theme === "dark" ? "invert" : ""}
           ></img>
         )}
       </div>
