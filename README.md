@@ -11,7 +11,7 @@
     •Error Recovery: Implemented error recovery mechanisms to handle accidental key presses and ensure smooth gameplay without interruptions
     •Minimalist Design: Focused on creating a clean, user-friendly interface to highlight functionality without distractions.
     
-TypeBlaster was an excellent opportunity to refine my coding skills and explore the fundamentals of interactive game development.
+TypeBlasterr was an excellent opportunity to refine my coding skills and explore the fundamentals of interactive game development.
 
 ![presentation_typeblaster](https://github.com/user-attachments/assets/3e0a3a5c-4370-4388-8043-d14333518c5d)
 
