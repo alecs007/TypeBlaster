@@ -4,12 +4,12 @@
 
 **What I learned while making TypeBlaster:**
 
-    •Word Generation: Developed an efficient random word generation system to keep the gameplay dynamic and unpredictable.
-    •Real-Time Input Handling: Mastered capturing and validating user input instantly to create a seamless experience.
-    •User Accessibility: Focused on ensuring the game is easy to navigate for players of all skill levels.
-    •Customizable Settings: Added options to adjust the theme, timer, and language to personalize the gameplay experience.
-    •Error Recovery: Implemented error recovery mechanisms to handle accidental key presses and ensure smooth gameplay without interruptions
-    •Minimalist Design: Focused on creating a clean, user-friendly interface to highlight functionality without distractions.
+    • Word Generation: Developed an efficient random word generation system to keep the gameplay dynamic and unpredictable.
+    • Real-Time Input Handling: Mastered capturing and validating user input instantly to create a seamless experience.
+    • User Accessibility: Focused on ensuring the game is easy to navigate for players of all skill levels.
+    • Customizable Settings: Added options to adjust the theme, timer, and language to personalize the gameplay experience.
+    • Error Recovery: Implemented error recovery mechanisms to handle accidental key presses and ensure smooth gameplay without interruptions
+    • Minimalist Design: Focused on creating a clean, user-friendly interface to highlight functionality without distractions.
     
 TypeBlaster was an excellent opportunity to refine my coding skills and explore the fundamentals of interactive game development.
 
