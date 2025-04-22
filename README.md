@@ -2,7 +2,7 @@
 
 **TypeBlaster** is a fast-paced typing game that helps players improve their typing speed and accuracy. The game challenges players to type randomly generated words as quickly and correctly as possible. The simplicity of the gameplay makes it engaging and educational, appealing to anyone looking to sharpen their typing skills.
 
-**What I learned while making TypeBlaster:**hdjjd
+**What I learned while making TypeBlaster:**
 
     • Word Generation: Developed an efficient random word generation system to keep the gameplay dynamic and unpredictable.
     • Real-Time Input Handling: Mastered capturing and validating user input instantly to create a seamless experience.
